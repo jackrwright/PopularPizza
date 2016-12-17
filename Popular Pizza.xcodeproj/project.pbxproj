@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		21EC43881E04A98200528CFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EC43871E04A98200528CFE /* main.m */; };
 		21EC438B1E04A98200528CFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EC438A1E04A98200528CFE /* AppDelegate.m */; };
-		21EC438E1E04A98200528CFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EC438D1E04A98200528CFE /* ViewController.m */; };
 		21EC43911E04A98200528CFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21EC438F1E04A98200528CFE /* Main.storyboard */; };
 		21EC43941E04A98200528CFE /* Popular_Pizza.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21EC43921E04A98200528CFE /* Popular_Pizza.xcdatamodeld */; };
 		21EC43961E04A98200528CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21EC43951E04A98200528CFE /* Assets.xcassets */; };
 		21EC43991E04A98200528CFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21EC43971E04A98200528CFE /* LaunchScreen.storyboard */; };
+		21EC43A41E04B0E400528CFE /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EC43A31E04B0E400528CFE /* CoreDataTableViewController.m */; };
+		21EC43A71E04B7EC00528CFE /* PopularPizzaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EC43A61E04B7EC00528CFE /* PopularPizzaTableViewController.m */; };
+		21EC43A91E04BABD00528CFE /* pizzaOrders.json in Resources */ = {isa = PBXBuildFile; fileRef = 21EC43A81E04BABD00528CFE /* pizzaOrders.json */; };
+		21EC43AC1E04E76D00528CFE /* OrderPopularity.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EC43AB1E04E76D00528CFE /* OrderPopularity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +24,18 @@
 		21EC43871E04A98200528CFE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		21EC43891E04A98200528CFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		21EC438A1E04A98200528CFE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		21EC438C1E04A98200528CFE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		21EC438D1E04A98200528CFE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		21EC43901E04A98200528CFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21EC43931E04A98200528CFE /* Popular_Pizza.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Popular_Pizza.xcdatamodel; sourceTree = "<group>"; };
 		21EC43951E04A98200528CFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21EC43981E04A98200528CFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21EC439A1E04A98200528CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21EC43A21E04B0E400528CFE /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
+		21EC43A31E04B0E400528CFE /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
+		21EC43A51E04B7EC00528CFE /* PopularPizzaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopularPizzaTableViewController.h; path = ../PopularPizzaTableViewController.h; sourceTree = "<group>"; };
+		21EC43A61E04B7EC00528CFE /* PopularPizzaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PopularPizzaTableViewController.m; path = ../PopularPizzaTableViewController.m; sourceTree = "<group>"; };
+		21EC43A81E04BABD00528CFE /* pizzaOrders.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pizzaOrders.json; sourceTree = "<group>"; };
+		21EC43AA1E04E76D00528CFE /* OrderPopularity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderPopularity.h; sourceTree = "<group>"; };
+		21EC43AB1E04E76D00528CFE /* OrderPopularity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderPopularity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,15 +68,13 @@
 		21EC43851E04A98200528CFE /* Popular Pizza */ = {
 			isa = PBXGroup;
 			children = (
-				21EC43891E04A98200528CFE /* AppDelegate.h */,
-				21EC438A1E04A98200528CFE /* AppDelegate.m */,
-				21EC438C1E04A98200528CFE /* ViewController.h */,
-				21EC438D1E04A98200528CFE /* ViewController.m */,
 				21EC438F1E04A98200528CFE /* Main.storyboard */,
-				21EC43951E04A98200528CFE /* Assets.xcassets */,
-				21EC43971E04A98200528CFE /* LaunchScreen.storyboard */,
-				21EC439A1E04A98200528CFE /* Info.plist */,
-				21EC43921E04A98200528CFE /* Popular_Pizza.xcdatamodeld */,
+				21EC43A51E04B7EC00528CFE /* PopularPizzaTableViewController.h */,
+				21EC43A61E04B7EC00528CFE /* PopularPizzaTableViewController.m */,
+				21EC43AA1E04E76D00528CFE /* OrderPopularity.h */,
+				21EC43AB1E04E76D00528CFE /* OrderPopularity.m */,
+				21EC43A81E04BABD00528CFE /* pizzaOrders.json */,
+				21EC43A11E04B0A300528CFE /* Core Data */,
 				21EC43861E04A98200528CFE /* Supporting Files */,
 			);
 			path = "Popular Pizza";
@@ -77,9 +83,24 @@
 		21EC43861E04A98200528CFE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				21EC43891E04A98200528CFE /* AppDelegate.h */,
+				21EC438A1E04A98200528CFE /* AppDelegate.m */,
+				21EC43951E04A98200528CFE /* Assets.xcassets */,
+				21EC43971E04A98200528CFE /* LaunchScreen.storyboard */,
+				21EC439A1E04A98200528CFE /* Info.plist */,
 				21EC43871E04A98200528CFE /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		21EC43A11E04B0A300528CFE /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				21EC43921E04A98200528CFE /* Popular_Pizza.xcdatamodeld */,
+				21EC43A21E04B0E400528CFE /* CoreDataTableViewController.h */,
+				21EC43A31E04B0E400528CFE /* CoreDataTableViewController.m */,
+			);
+			name = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21EC43991E04A98200528CFE /* LaunchScreen.storyboard in Resources */,
+				21EC43A91E04BABD00528CFE /* pizzaOrders.json in Resources */,
 				21EC43961E04A98200528CFE /* Assets.xcassets in Resources */,
 				21EC43911E04A98200528CFE /* Main.storyboard in Resources */,
 			);
@@ -154,10 +176,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21EC438E1E04A98200528CFE /* ViewController.m in Sources */,
 				21EC438B1E04A98200528CFE /* AppDelegate.m in Sources */,
+				21EC43AC1E04E76D00528CFE /* OrderPopularity.m in Sources */,
 				21EC43941E04A98200528CFE /* Popular_Pizza.xcdatamodeld in Sources */,
 				21EC43881E04A98200528CFE /* main.m in Sources */,
+				21EC43A71E04B7EC00528CFE /* PopularPizzaTableViewController.m in Sources */,
+				21EC43A41E04B0E400528CFE /* CoreDataTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
