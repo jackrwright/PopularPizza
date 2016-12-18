@@ -45,9 +45,22 @@
 		[_maxPopularTextField setText: [NSString stringWithFormat:@"%@", [kMaxPopularDefault stringValue]]];
 	}
 	
+	// put the cursor in the text field and bring up the keyboard
+	[_maxPopularTextField becomeFirstResponder];
 }
 
 #pragma mark -
+
+- (IBAction)done:(UIBarButtonItem *)sender
+{
+	NSInteger max = [_maxPopularTextField.text integerValue];
+	NSNumber *maxPopular = [NSNumber numberWithInteger:max];
+	[self setMaxPopular:maxPopular];
+	
+	// dismiass the keyboard
+	
+	[_maxPopularTextField resignFirstResponder];
+}
 
 - (void) setMaxPopular:(NSNumber *)maxPopular
 {
@@ -56,13 +69,6 @@
 	// Persist in user defaults
 	[[NSUserDefaults standardUserDefaults] setObject:_maxPopular forKey:kMaxPopularKey];
 
-}
-
-- (IBAction)textFieldChanged:(UITextField *)sender
-{
-	NSInteger max = [sender.text integerValue];
-	NSNumber *maxPopular = [NSNumber numberWithInteger:max];
-	[self setMaxPopular:maxPopular];
 }
 
 @end

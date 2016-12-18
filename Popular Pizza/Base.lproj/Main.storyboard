@@ -135,9 +135,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                                     <connections>
-                                                        <action selector="textFieldChanged:" destination="RcD-SP-2XH" eventType="editingChanged" id="ZdZ-lE-QFl"/>
+                                                        <outlet property="delegate" destination="RcD-SP-2XH" id="1sP-Ha-XYX"/>
                                                     </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="popular orders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgg-g7-JV4">
@@ -158,7 +158,13 @@
                             <outlet property="delegate" destination="RcD-SP-2XH" id="FE0-fL-hK7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Settings" id="PwD-VE-fP5"/>
+                    <navigationItem key="navigationItem" title="Settings" id="PwD-VE-fP5">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="OHH-TX-gRh">
+                            <connections>
+                                <action selector="done:" destination="RcD-SP-2XH" id="TyV-5G-x5K"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="maxPopularTextField" destination="hSC-rk-Eea" id="oF5-yl-V5H"/>
                     </connections>
