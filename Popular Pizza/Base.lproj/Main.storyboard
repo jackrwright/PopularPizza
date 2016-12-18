@@ -234,7 +234,7 @@
         <scene sceneID="uRE-gT-ezb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e7A-xJ-BXh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Popular" id="tuk-w8-ZH8"/>
+                    <tabBarItem key="tabBarItem" title="Popular" image="PopularTabIcon" id="tuk-w8-ZH8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nAo-lM-VCb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -253,7 +253,7 @@
         <scene sceneID="NzK-Ry-bXM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nOQ-uh-ubW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Custom" id="ccT-jM-XoG"/>
+                    <tabBarItem key="tabBarItem" title="Custom" image="CustomTabIcon" id="ccT-jM-XoG"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KAd-Es-VW2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -272,7 +272,7 @@
         <scene sceneID="e7s-M8-k9q">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cpi-NE-fWk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="Gty-mB-Qdc"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="SettingsTabIcon" id="Gty-mB-Qdc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="COf-d0-uL7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -306,4 +306,9 @@
             <point key="canvasLocation" x="2821.5999999999999" y="528.48575712143929"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CustomTabIcon" width="30" height="30"/>
+        <image name="PopularTabIcon" width="30" height="30"/>
+        <image name="SettingsTabIcon" width="24" height="24"/>
+    </resources>
 </document>
