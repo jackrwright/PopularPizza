@@ -2,6 +2,10 @@
 //  OrderTableViewController.m
 //  Popular Pizza
 //
+// This controller displays the custom pizza orders
+// and allows the user to indicate favorites.
+// The orders and favorite choices are preserved with Core Data.
+//
 //  Created by Jack Wright on 12/17/16.
 //  Copyright © 2016 Jack Wright. All rights reserved.
 //
@@ -10,6 +14,7 @@
 #import "EditOrderTableViewController.h"
 #import "AppDelegate.h"
 #import "Order+CoreDataClass.h"
+#import "globals.h"
 
 @interface OrderTableViewController () {
 }
@@ -133,7 +138,7 @@
 		EditOrderTableViewController *editTVC = (EditOrderTableViewController *)theVC;
 		
 		UITableViewCell *cell = (UITableViewCell *)sender;
-		NSArray *toppings = [cell.textLabel.text componentsSeparatedByString:@", "];
+		NSArray *toppings = [cell.textLabel.text componentsSeparatedByString:kToppingSep];
 		
 		editTVC.toppingsToShow = toppings;
 	}

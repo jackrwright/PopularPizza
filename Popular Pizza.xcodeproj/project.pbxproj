@@ -54,6 +54,7 @@
 		21EC43AB1E04E76D00528CFE /* OrderPopularity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderPopularity.m; sourceTree = "<group>"; };
 		21FBA76E1E0637C60012D286 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
 		21FBA76F1E0637C60012D286 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
+		21FBA7741E06E81E0012D286 /* globals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = globals.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				21EC438F1E04A98200528CFE /* Main.storyboard */,
+				21FBA7741E06E81E0012D286 /* globals.h */,
 				21EC43A51E04B7EC00528CFE /* PopularPizzaTableViewController.h */,
 				21EC43A61E04B7EC00528CFE /* PopularPizzaTableViewController.m */,
 				21EC43AA1E04E76D00528CFE /* OrderPopularity.h */,

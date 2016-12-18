@@ -10,6 +10,7 @@
 #import "ToppingSelectorTableViewController.h"
 #import "Order+CoreDataClass.h"
 #import "AppDelegate.h"
+#import "globals.h"
 
 @import CoreData;
 
@@ -50,7 +51,7 @@
 	// insert a new order entity
 	Order *newOrder = [NSEntityDescription insertNewObjectForEntityForName:@"Order" inManagedObjectContext: APP_DELEGATE.persistentContainer.viewContext];
 	
-	newOrder.toppings = [_toppings componentsJoinedByString:@", "];
+	newOrder.toppings = [_toppings componentsJoinedByString:kToppingSep];
 	
 	[APP_DELEGATE saveContext];
 	

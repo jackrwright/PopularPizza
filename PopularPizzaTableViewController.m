@@ -10,8 +10,7 @@
 #import "OrderPopularity.h"
 #import "OrderTableViewController.h"
 #import "SettingsTableViewController.h"
-
-#define kToppingSep @", "
+#import "globals.h"
 
 @interface PopularPizzaTableViewController ()
 {
@@ -27,7 +26,7 @@
 	_availableToppings = availableToppings;
 	
 	// Persist in user defaults
-	[[NSUserDefaults standardUserDefaults] setObject:_availableToppings forKey:@"availableToppings"];
+	[[NSUserDefaults standardUserDefaults] setObject:_availableToppings forKey:kAvailableToppings];
 }
 
 - (void)viewDidLoad {

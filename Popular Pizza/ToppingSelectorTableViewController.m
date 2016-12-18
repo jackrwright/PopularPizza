@@ -2,11 +2,15 @@
 //  ToppingSelectorTableViewController.m
 //  Popular Pizza
 //
+// This table view controller allows the user to select from the available toppings.
+// They are derived from the into json file.
+//
 //  Created by Jack Wright on 12/17/16.
 //  Copyright © 2016 Jack Wright. All rights reserved.
 //
 
 #import "ToppingSelectorTableViewController.h"
+#import "globals.h"
 
 @interface ToppingSelectorTableViewController ()
 
@@ -27,7 +31,7 @@
 	
 	self.navigationItem.title = @"Select a Topping";
 	
-	_availableTopppings = [[NSUserDefaults standardUserDefaults] objectForKey:@"availableToppings"];
+	_availableTopppings = [[NSUserDefaults standardUserDefaults] objectForKey:kAvailableToppings];
 	
 	[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellId];
 }
