@@ -9,12 +9,14 @@
 #import "PopularPizzaTableViewController.h"
 #import "OrderPopularity.h"
 #import "OrderTableViewController.h"
+#import "SettingsTableViewController.h"
 
 #define kToppingSep @", "
 
 @interface PopularPizzaTableViewController ()
 {
 	NSArray <OrderPopularity *>	*orders;
+	NSInteger maxPopular;
 }
 @end
 
@@ -31,12 +33,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-	
 	[self buildModelForTable];
 	
 	[self.tableView reloadData];
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+	
+	// Read the max popular orders from user defaults
+	NSNumber *max = [[NSUserDefaults standardUserDefaults] objectForKey:kMaxPopularKey];
+	
+	if ([max integerValue] != maxPopular) {
+		maxPopular = [max integerValue];
+		[self.tableView reloadData];
+	}
 }
 
 - (void) buildModelForTable
@@ -96,7 +108,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return orders.count;
+	return maxPopular < 0 ? orders.count : maxPopular;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -110,7 +122,6 @@
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
 	OrderTableViewController *orderTVC = [segue destinationViewController];

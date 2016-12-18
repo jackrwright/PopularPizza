@@ -4,7 +4,6 @@
 //
 //  Created by Jack Wright on 12/17/16.
 //  Copyright © 2016 Jack Wright. All rights reserved.
-//  This file was automatically generated and should not be edited.
 //
 
 #import "Order+CoreDataProperties.h"
@@ -16,5 +15,6 @@
 }
 
 @dynamic toppings;
+@dynamic isFavorite;
 
 @end
