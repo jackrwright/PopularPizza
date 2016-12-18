@@ -58,7 +58,21 @@
 	Order *order = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
 	cell.textLabel.text = order.toppings;
-    
+	
+	UIImage *favoriteImage;
+	if (order.isFavorite) {
+		favoriteImage = [UIImage imageNamed:@"star_gold"];
+	} else {
+		favoriteImage = [UIImage imageNamed:@"star_empty"];
+	}
+	
+	cell.accessoryView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+ 	cell.accessoryView.opaque = NO;
+	cell.backgroundColor = [UIColor clearColor];
+	
+	[(UIButton *)cell.accessoryView setImage:favoriteImage forState:UIControlStateNormal];
+	[(UIButton *)cell.accessoryView addTarget:self action:@selector(favoriteButtonTapped:forEvent:) forControlEvents:UIControlEventTouchUpInside];
+
     return cell;
 }
 
@@ -73,6 +87,30 @@
     }
 }
 
+- (IBAction)favoriteButtonTapped:(id)sender forEvent:(UIEvent*)event
+{
+	NSSet *touches = [event allTouches];
+	UITouch *touch = [touches anyObject];
+	CGPoint currentTouchPosition = [touch locationInView:self.tableView];
+	
+	// Lookup the index path of the cell whose button was tapped
+	NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:currentTouchPosition];
+	
+	if (indexPath != nil) {
+		
+		// flip the favorites icon
+		
+		Order *order = [self.fetchedResultsController objectAtIndexPath:indexPath];
+		
+		if (order.isFavorite) {
+			order.isFavorite = false;
+		} else {
+			order.isFavorite = true;
+		}
+		
+		[APP_DELEGATE saveContext];
+	}
+}
 
 #pragma mark - Navigation
 

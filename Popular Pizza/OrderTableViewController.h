@@ -15,5 +15,4 @@
 @property (nonatomic) BOOL allowEditing;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
-
 @end
