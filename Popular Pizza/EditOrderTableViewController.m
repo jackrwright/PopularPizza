@@ -25,15 +25,13 @@
     [super viewDidLoad];
 	
 	if (_toppingsToShow) {
+		// if _toppingsToShow is set, we're just showing the list of toppings
 		_toppings = [NSMutableArray arrayWithArray:_toppingsToShow];
-//		self.navigationItem.rightBarButtonItem = self.editButtonItem;
+		self.navigationItem.rightBarButtonItem = nil;
 	} else {
 		_toppings = [[NSMutableArray alloc] init];
 	}
 	
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -82,12 +80,6 @@
     return cell;
 }
 
-//// Override to support conditional editing of the table view.
-//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-//    // Return NO if you do not want the specified item to be editable.
-//    return YES;
-//}
-
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView
 		   editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
@@ -101,10 +93,17 @@
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
+
+		// Delete the row from the data source
+		[_toppings removeObjectAtIndex:indexPath.row];
+		
+		// update the table
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+		
+		
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        // The user wants to add a new topping.
+		// The selected topping will be delivered to the didSelectTopping method below.
 		
 		// present the user with the topping selector
 		ToppingSelectorTableViewController *toppingsSelector = [[ToppingSelectorTableViewController alloc] init];
@@ -124,29 +123,5 @@
 	
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -28,11 +28,6 @@
 	[[NSUserDefaults standardUserDefaults] setObject:_availableToppings forKey:@"availableToppings"];
 }
 
-//- (void) getAvailableToppings:(NSArray **)availableToppings range:(NSRange)inRange
-//{
-//	_availableToppings = [[NSUserDefaults standardUserDefaults] objectForKey:@"availableToppings"];
-//}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
