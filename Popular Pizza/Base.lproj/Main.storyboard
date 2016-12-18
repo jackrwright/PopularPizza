@@ -164,7 +164,7 @@
             </objects>
             <point key="canvasLocation" x="1835.625" y="1356.25"/>
         </scene>
-        <!--Popular Pizza Toppings-->
+        <!--Popular Pizza Orders-->
         <scene sceneID="eWQ-e4-zT7">
             <objects>
                 <tableViewController id="22l-GL-UFR" customClass="PopularPizzaTableViewController" sceneMemberID="viewController">
@@ -204,7 +204,7 @@
                             <outlet property="delegate" destination="22l-GL-UFR" id="lF0-4x-DZK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Popular Pizza Toppings" id="knD-We-Fcd"/>
+                    <navigationItem key="navigationItem" title="Popular Pizza Orders" id="knD-We-Fcd"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Omv-Zd-TnW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
