@@ -10,4 +10,6 @@
 
 @interface PopularPizzaTableViewController : UITableViewController
 
+@property (nonatomic, strong) NSArray <NSString *> *availableToppings;
+
 @end

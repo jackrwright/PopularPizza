@@ -29,18 +29,96 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*
+ * Whenever the fetchedResultsController is set, perform the fetch.
+ * As the delegate, we'll be notified of the changes.
+ */
+- (void) setFetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
+{
+	_fetchedResultsController = fetchedResultsController;
+	
+	if (_fetchedResultsController) {
+		_fetchedResultsController.delegate = self;
+		
+		// fetch
+		NSError *error = nil;
+		[_fetchedResultsController performFetch:&error];
+		
+		if (error) {
+			NSLog(@"performFetch FAILED: %@", [error localizedDescription]);
+		}
+	}
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-	//return [[<#Fetched results controller#> sections] count];
-	return 0;
+	return [[_fetchedResultsController sections] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+	if ([[_fetchedResultsController sections] count] > 0) {
+		id <NSFetchedResultsSectionInfo> sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
+		return [sectionInfo numberOfObjects];
+	} else {
+		return 0;
+	}
 }
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	if ([[_fetchedResultsController sections] count] > 0) {
+		id <NSFetchedResultsSectionInfo> sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
+		return [sectionInfo name];
+	} else {
+		return nil;
+	}
+}
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+	return [_fetchedResultsController sectionIndexTitles];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+	return [_fetchedResultsController sectionForSectionIndexTitle:title atIndex:index];
+}
+
+#pragma mark - Fetched results controller delegate
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
+{
+	[self.tableView beginUpdates];
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
+	   atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
+	  newIndexPath:(NSIndexPath *)newIndexPath
+{
+	switch(type) {
+		case NSFetchedResultsChangeInsert:
+			[self.tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+			break;
+			
+		case NSFetchedResultsChangeDelete:
+			[self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+			break;
+			
+		case NSFetchedResultsChangeUpdate:
+			[self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+			break;
+			
+		case NSFetchedResultsChangeMove:
+			[self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+			[self.tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+			break;
+	}
+}
+
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
+{
+	[self.tableView endUpdates];
+}
+
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

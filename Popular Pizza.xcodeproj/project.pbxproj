@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2170B6161E0567F7000BD085 /* OrderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2170B6151E0567F7000BD085 /* OrderTableViewController.m */; };
+		2170B6191E057F53000BD085 /* EditOrderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2170B6181E057F53000BD085 /* EditOrderTableViewController.m */; };
+		2170B61C1E05AB2F000BD085 /* ToppingSelectorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2170B61B1E05AB2F000BD085 /* ToppingSelectorTableViewController.m */; };
+		2170B64B1E05FCE7000BD085 /* Order+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2170B6481E05FCE7000BD085 /* Order+CoreDataClass.m */; };
+		2170B64C1E05FCE7000BD085 /* Order+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2170B64A1E05FCE7000BD085 /* Order+CoreDataProperties.m */; };
 		21EC43881E04A98200528CFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EC43871E04A98200528CFE /* main.m */; };
 		21EC438B1E04A98200528CFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EC438A1E04A98200528CFE /* AppDelegate.m */; };
 		21EC43911E04A98200528CFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21EC438F1E04A98200528CFE /* Main.storyboard */; };
@@ -20,6 +25,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2170B6141E0567F7000BD085 /* OrderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderTableViewController.h; sourceTree = "<group>"; };
+		2170B6151E0567F7000BD085 /* OrderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderTableViewController.m; sourceTree = "<group>"; };
+		2170B6171E057F53000BD085 /* EditOrderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditOrderTableViewController.h; sourceTree = "<group>"; };
+		2170B6181E057F53000BD085 /* EditOrderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditOrderTableViewController.m; sourceTree = "<group>"; };
+		2170B61A1E05AB2F000BD085 /* ToppingSelectorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToppingSelectorTableViewController.h; sourceTree = "<group>"; };
+		2170B61B1E05AB2F000BD085 /* ToppingSelectorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToppingSelectorTableViewController.m; sourceTree = "<group>"; };
+		2170B6471E05FCE7000BD085 /* Order+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Order+CoreDataClass.h"; sourceTree = "<group>"; };
+		2170B6481E05FCE7000BD085 /* Order+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Order+CoreDataClass.m"; sourceTree = "<group>"; };
+		2170B6491E05FCE7000BD085 /* Order+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Order+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2170B64A1E05FCE7000BD085 /* Order+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Order+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2170B64D1E061C51000BD085 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
 		21EC43831E04A98200528CFE /* Popular Pizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Popular Pizza.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21EC43871E04A98200528CFE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		21EC43891E04A98200528CFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,7 +45,6 @@
 		21EC43951E04A98200528CFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21EC43981E04A98200528CFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21EC439A1E04A98200528CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		21EC43A21E04B0E400528CFE /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
 		21EC43A31E04B0E400528CFE /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
 		21EC43A51E04B7EC00528CFE /* PopularPizzaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopularPizzaTableViewController.h; path = ../PopularPizzaTableViewController.h; sourceTree = "<group>"; };
 		21EC43A61E04B7EC00528CFE /* PopularPizzaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PopularPizzaTableViewController.m; path = ../PopularPizzaTableViewController.m; sourceTree = "<group>"; };
@@ -73,6 +88,12 @@
 				21EC43A61E04B7EC00528CFE /* PopularPizzaTableViewController.m */,
 				21EC43AA1E04E76D00528CFE /* OrderPopularity.h */,
 				21EC43AB1E04E76D00528CFE /* OrderPopularity.m */,
+				2170B6141E0567F7000BD085 /* OrderTableViewController.h */,
+				2170B6151E0567F7000BD085 /* OrderTableViewController.m */,
+				2170B6171E057F53000BD085 /* EditOrderTableViewController.h */,
+				2170B6181E057F53000BD085 /* EditOrderTableViewController.m */,
+				2170B61A1E05AB2F000BD085 /* ToppingSelectorTableViewController.h */,
+				2170B61B1E05AB2F000BD085 /* ToppingSelectorTableViewController.m */,
 				21EC43A81E04BABD00528CFE /* pizzaOrders.json */,
 				21EC43A11E04B0A300528CFE /* Core Data */,
 				21EC43861E04A98200528CFE /* Supporting Files */,
@@ -96,8 +117,12 @@
 		21EC43A11E04B0A300528CFE /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				2170B6471E05FCE7000BD085 /* Order+CoreDataClass.h */,
+				2170B6481E05FCE7000BD085 /* Order+CoreDataClass.m */,
+				2170B6491E05FCE7000BD085 /* Order+CoreDataProperties.h */,
+				2170B64A1E05FCE7000BD085 /* Order+CoreDataProperties.m */,
 				21EC43921E04A98200528CFE /* Popular_Pizza.xcdatamodeld */,
-				21EC43A21E04B0E400528CFE /* CoreDataTableViewController.h */,
+				2170B64D1E061C51000BD085 /* CoreDataTableViewController.h */,
 				21EC43A31E04B0E400528CFE /* CoreDataTableViewController.m */,
 			);
 			name = "Core Data";
@@ -177,9 +202,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				21EC438B1E04A98200528CFE /* AppDelegate.m in Sources */,
+				2170B61C1E05AB2F000BD085 /* ToppingSelectorTableViewController.m in Sources */,
+				2170B6161E0567F7000BD085 /* OrderTableViewController.m in Sources */,
+				2170B6191E057F53000BD085 /* EditOrderTableViewController.m in Sources */,
+				2170B64B1E05FCE7000BD085 /* Order+CoreDataClass.m in Sources */,
 				21EC43AC1E04E76D00528CFE /* OrderPopularity.m in Sources */,
 				21EC43941E04A98200528CFE /* Popular_Pizza.xcdatamodeld in Sources */,
 				21EC43881E04A98200528CFE /* main.m in Sources */,
+				2170B64C1E05FCE7000BD085 /* Order+CoreDataProperties.m in Sources */,
 				21EC43A71E04B7EC00528CFE /* PopularPizzaTableViewController.m in Sources */,
 				21EC43A41E04B0E400528CFE /* CoreDataTableViewController.m in Sources */,
 			);
@@ -338,6 +368,7 @@
 				21EC439F1E04A98200528CFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

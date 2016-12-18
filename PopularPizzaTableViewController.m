@@ -8,15 +8,30 @@
 
 #import "PopularPizzaTableViewController.h"
 #import "OrderPopularity.h"
+#import "OrderTableViewController.h"
+
+#define kToppingSep @", "
 
 @interface PopularPizzaTableViewController ()
 {
 	NSArray <OrderPopularity *>	*orders;
-	NSArray <NSString *>		*availableToppings;
 }
 @end
 
 @implementation PopularPizzaTableViewController
+
+- (void) setAvailableToppings:(NSArray<NSString *> *)availableToppings
+{
+	_availableToppings = availableToppings;
+	
+	// Persist in user defaults
+	[[NSUserDefaults standardUserDefaults] setObject:_availableToppings forKey:@"availableToppings"];
+}
+
+//- (void) getAvailableToppings:(NSArray **)availableToppings range:(NSRange)inRange
+//{
+//	_availableToppings = [[NSUserDefaults standardUserDefaults] objectForKey:@"availableToppings"];
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -54,13 +69,13 @@
 		// Create a string of toppings by joining the individual toppings with commas
 		// and add it to the set. Since we are using an NSCountedSet,
 		// only unique strings will be added, but they will still be counted.
-		[toppingsSet addObject:[sortedToppings componentsJoinedByString:@", "]];
+		[toppingsSet addObject:[sortedToppings componentsJoinedByString:kToppingSep]];
 	}
 	
 	// Create a sorted array of available toppings for creating custom orders.
 	// NSString provides a 'description' method that returns the string.
 	NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"description" ascending:YES];
-	availableToppings = [availableToppingsSet sortedArrayUsingDescriptors:@[sortDescriptor]];
+	[self setAvailableToppings: [availableToppingsSet sortedArrayUsingDescriptors:@[sortDescriptor]]];
 	
 	// Now populate an array for use in the table
 	NSMutableArray *theOrders = [[NSMutableArray alloc] initWithCapacity:toppingsSet.count];
@@ -98,14 +113,18 @@
     return cell;
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+	OrderTableViewController *orderTVC = [segue destinationViewController];
+	
+	if (orderTVC) {
+		UITableViewCell *tappedRow = (UITableViewCell *)sender;
+		orderTVC.navigationItem.title = [NSString stringWithFormat:@"%@ Orders", tappedRow.detailTextLabel.text];
+		orderTVC.toppings = [tappedRow.textLabel.text componentsSeparatedByString:kToppingSep];
+	}
 }
-*/
 
 @end
