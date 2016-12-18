@@ -11,6 +11,7 @@
 //
 
 #import "OrderTableViewController.h"
+#import "SingleOrderTableViewController.h"
 #import "EditOrderTableViewController.h"
 #import "AppDelegate.h"
 #import "Order+CoreDataClass.h"
@@ -135,12 +136,12 @@
 		
 	} else if ([segue.identifier isEqualToString: @"show"]) {
 		// The user wants to view the list of toppings for this order
-		EditOrderTableViewController *editTVC = (EditOrderTableViewController *)theVC;
+		SingleOrderTableViewController *singleOrderTVC = (SingleOrderTableViewController *)theVC;
 		
 		UITableViewCell *cell = (UITableViewCell *)sender;
 		NSArray *toppings = [cell.textLabel.text componentsSeparatedByString:kToppingSep];
 		
-		editTVC.toppingsToShow = toppings;
+		singleOrderTVC.toppings = toppings;
 	}
 }
 

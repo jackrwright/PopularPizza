@@ -23,6 +23,7 @@
 		21EC43A91E04BABD00528CFE /* pizzaOrders.json in Resources */ = {isa = PBXBuildFile; fileRef = 21EC43A81E04BABD00528CFE /* pizzaOrders.json */; };
 		21EC43AC1E04E76D00528CFE /* OrderPopularity.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EC43AB1E04E76D00528CFE /* OrderPopularity.m */; };
 		21FBA7701E0637C60012D286 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FBA76F1E0637C60012D286 /* SettingsTableViewController.m */; };
+		21FBA7771E07007A0012D286 /* SingleOrderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FBA7761E07007A0012D286 /* SingleOrderTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		21FBA76E1E0637C60012D286 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
 		21FBA76F1E0637C60012D286 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
 		21FBA7741E06E81E0012D286 /* globals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = globals.h; sourceTree = "<group>"; };
+		21FBA7751E07007A0012D286 /* SingleOrderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleOrderTableViewController.h; sourceTree = "<group>"; };
+		21FBA7761E07007A0012D286 /* SingleOrderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleOrderTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,8 @@
 				21EC43AB1E04E76D00528CFE /* OrderPopularity.m */,
 				21FBA76E1E0637C60012D286 /* SettingsTableViewController.h */,
 				21FBA76F1E0637C60012D286 /* SettingsTableViewController.m */,
+				21FBA7751E07007A0012D286 /* SingleOrderTableViewController.h */,
+				21FBA7761E07007A0012D286 /* SingleOrderTableViewController.m */,
 				2170B6141E0567F7000BD085 /* OrderTableViewController.h */,
 				2170B6151E0567F7000BD085 /* OrderTableViewController.m */,
 				2170B6171E057F53000BD085 /* EditOrderTableViewController.h */,
@@ -210,6 +215,7 @@
 			files = (
 				21FBA7701E0637C60012D286 /* SettingsTableViewController.m in Sources */,
 				21EC438B1E04A98200528CFE /* AppDelegate.m in Sources */,
+				21FBA7771E07007A0012D286 /* SingleOrderTableViewController.m in Sources */,
 				2170B61C1E05AB2F000BD085 /* ToppingSelectorTableViewController.m in Sources */,
 				2170B6161E0567F7000BD085 /* OrderTableViewController.m in Sources */,
 				2170B6191E057F53000BD085 /* EditOrderTableViewController.m in Sources */,

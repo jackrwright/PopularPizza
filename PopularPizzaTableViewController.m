@@ -8,7 +8,7 @@
 
 #import "PopularPizzaTableViewController.h"
 #import "OrderPopularity.h"
-#import "OrderTableViewController.h"
+#import "SingleOrderTableViewController.h"
 #import "SettingsTableViewController.h"
 #import "globals.h"
 
@@ -123,7 +123,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
-	OrderTableViewController *orderTVC = [segue destinationViewController];
+	SingleOrderTableViewController *orderTVC = [segue destinationViewController];
 	
 	if (orderTVC) {
 		UITableViewCell *tappedRow = (UITableViewCell *)sender;
